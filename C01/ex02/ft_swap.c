@@ -19,4 +19,5 @@ int     main(void)
     printf ("before :\n a = %d\n b = %d\n", a, b);
     ft_swap(&a, &b);
     printf ("after :\n a = %d\n b = %d\n", a, b);
+    return(0);
 }
