@@ -11,10 +11,7 @@ void    ft_print_reverse_alphabet(void)
 
     c = 'z';
     while (c >= 'a')
-    {
-        ft_putchar(c);
-        c--;
-    }
+        ft_putchar(c--);
 }
 
 int     main(void)
