@@ -11,10 +11,7 @@ void    ft_print_alphabet(void)
 
     c = 'a';
     while (c <= 'z')
-    {
-        ft_putchar(c);
-        c++;
-    }
+        ft_putchar(c++);
 }
 
 int     main(void)
