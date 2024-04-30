@@ -11,10 +11,7 @@ void    ft_print_numbers(void)
 
     c = '0';
     while(c <= '9')
-    {
-        ft_putchar(c);
-        c++;
-    }
+        ft_putchar(c++);
 }
 
 int     main(void)
