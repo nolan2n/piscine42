@@ -36,8 +36,7 @@ int     main(void)
 
     printf("DestLen = %d\n", ft_strlen(dest));
     printf("SrcLen = %d\n", ft_strlen(src));
-    printf("return = %d\n", ft_strlcat(dest, src, 11));
-    ft_strlcat(dest, src, 9);
+    printf("return = %d\n", ft_strlcat(dest, src, 9));
     printf("%s\n", dest);
     return (0);
 }
