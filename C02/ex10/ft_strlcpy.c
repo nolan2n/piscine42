@@ -40,5 +40,5 @@ dest  |a|b|c|d|\0|
 i     |0|1|2|3|4 | 
 
 -When n = 0 (thereby i = 4) we exit the loop and append '\0' at dest[4] corresponding to the fith char
--Size = the number of char I want to copy from src + '\0'. So if a want to copy 4 char, size should be equal to 5 
+-Size = the number of char I want to copy from src + '\0'. So if I want to copy 4 char, size should be equal to 5 
 */
