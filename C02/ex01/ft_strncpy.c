@@ -25,3 +25,9 @@ int     main(void)
     ft_putstr(ft_strncpy(dest, src, 3));
     return (0);
 }
+/*how it work
+(n--)=3 |3|2|1|0| -> n = 0 we exit the loop
+src     |h|e|l|l|o|
+dest    |h|e|l|
+i       |0|1|2|
+*/
