@@ -11,9 +11,9 @@ char    *ft_strncpy(char *dest, char *src, unsigned int n)
     unsigned int     i;
 
     i = 0;
-    while(*src && --n)
+    while(*src && n--)
         *(dest + i++) = *src++;
-    while (n--)
+    if (n--)//in case n > SrcLen
         *(dest + i++) = '\0';
     return (dest);
 }
@@ -21,7 +21,7 @@ char    *ft_strncpy(char *dest, char *src, unsigned int n)
 int     main(void)
 {
     char    src[] = "hello";
-    char    dest[3];
-    ft_putstr(ft_strncpy(dest, src, 2));
+    char    dest[4];
+    ft_putstr(ft_strncpy(dest, src, 3));
     return (0);
 }
