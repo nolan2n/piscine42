@@ -1,6 +1,6 @@
        \ putnbr VS putnbr_base /
 
-- With putnbr_base we write a number in accordance with my base.
+- With putnbr_base we write a number depending on my base.
 - My base will be the lenght of my array.
 - My array's lenght should be superior to 1.
 - So if I want to write 123 in a base 10 my array will be "0123456789"(array's lenght = 10)
