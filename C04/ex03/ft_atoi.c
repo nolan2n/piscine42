@@ -2,28 +2,26 @@
 
 int     ft_atoi(char *str)
 {
-    int     i;
     int     convert;
     int     sign;
 
-    i = 0;
     convert = 0;
     sign = 1;
-    while(*(str + i) == ' ' || *(str + i) == '\t' || *(str + i) == '\n' || *(str + i) == '\r' || *(str + i) == '\f' || *(str + i) == '\v')
-        i++;
-    while(*(str + i) == '+' || *(str + i) == '-')
+    while((*str >= 9 && *str <= 13) || *str == 32) //ascii for the isspace and 32 is ' '(space)
+        str++;
+    while(*str == '+' || *str == '-')
     {
-        if (*(str + i++) == '-')
+        if (*str++ == '-')
             sign *= -1;
     }    
-    while(*(str + i) >= '0' && *(str + i) <= '9')
-        convert = convert * 10 + (*(str + i++) - '0');
+    while(*str >= '0' && *str <= '9')
+        convert = convert * 10 + (*str++ - '0');
     return (convert * sign);
 }
 
 int     main(void)
 {
-    char    *test = "    ---231";
+    char    *test = "    --++--23b1";
     printf("%d\n", ft_atoi(test));
     return (0);
 }
