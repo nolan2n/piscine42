@@ -48,14 +48,14 @@ void    ft_putnbr_base(int nbr, char *base)
     BaseLen = ft_strlen(base);
     if(!check_base(base))
         return;
-    if (nbr < 0)
+    if (l < 0)
     {
-        nbr *= -1;
+        l *= -1;
         ft_putchar('-');
     }
-    if (nbr >= BaseLen)
-        ft_putnbr_base((nbr / BaseLen), base);
-    ft_putchar(*(base + (nbr % BaseLen)));
+    if (l >= BaseLen)
+        ft_putnbr_base((l / BaseLen), base);
+    ft_putchar(*(base + (l % BaseLen)));
 }
 
 int main(void)
