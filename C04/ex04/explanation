@@ -1,0 +1,144 @@
+       \ putnbr VS putnbr_base /
+
+- With putnbr_base we write a number in accordance with my base.
+- My base will be the lenght of my array.
+- My array's lenght should be superior to 1.
+- So if I want to write 123 in a base 10 my array will be "0123456789"(array's lenght = 10)
+- I can replace the number in my array by a anything except a '+' a '-' or a duplicate. the only thing thats matter is the lenght of my array.  
+- For exemple I can replace "0123456789" by "abcdefghij" but I can't have the same letter twice in my array.
+________________________________________________
+
+               \ BASE 10 /
+               "0123456789"
+               Baselen = 10
+-------how it work step by step---------------
+
+Step 1 : 123 > 10 thereby ft_putnbr(123 / 10, base)
+
+Step 2 : 12 > 10 thereby ft_putnbr(23 / 10, base)
+
+Step 3 : 1 < 10  
+
+-----------------ft_putchar--------------------
+
+- So now we ft_putchar(*(base + (nbr % BaseLen))). 
+- It mean that we ft_putchar the value of my array at index = (nbr % Baselen);
+- In this case I will ft_putchar the value at index (nbr % 10). I will ft_putchar only the unit of nbr. 
+- The ft_putchar order will be "step 3 -> step 2 -> step 1".
+
+ft_putchar(*(base + (1 % 10)))   = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (12 % 10)))  = ft_putchar(*(base + 2)) = 2
+ft_putchar(*(base + (123 % 10))) = ft_putchar(*(base + 3)) = 3
+
+----------------the final result----------------
+
+finally the result step by step will be :
+
+step 1 -> 1
+step 2 -> 12
+step 3 -> 123(the result)
+__________________________________________________
+               
+               \ BASE 16 /
+            "0123456789abcdef"
+               Baselen = 16
+-------how it work step by step---------------
+
+Step 1 : 123 > 16 thereby ft_putnbr(123 / 16, base)
+
+Step 2 : 7 < 16
+
+-----------------ft_putchar--------------------
+
+- So now we ft_putchar(*(base + (nbr % BaseLen))). 
+- It mean that we ft_putchar the value of my array at index = (nbr % Baselen).
+- In this case I will ft_putchar the value at index (nbr % 16). If nbr > 16, nbr % 16 = the remainder of nbr / 16.
+- The ft_putchar order will be "step 2 -> step 1".
+
+ft_putchar(*(base + (7 % 16)))   = ft_putchar(*(base + 7)) = 7
+ft_putchar(*(base + (123 % 16))) = ft_putchar(*(base + 11)) = b
+
+----------------the final result----------------
+
+finally the result step by step will be :
+
+step 1 -> 7
+step 2 -> 7b(the result)
+__________________________________________________
+               
+               \ BASE 2 /
+                  "01"
+               Baselen = 2
+-------how it work step by step---------------
+
+Step 1 : 123 > 2 thereby ft_putnbr(123 / 2, base)
+
+Step 2 : 61 > 2 thereby ft_putnbr(61 / 2, base)
+
+Step 3 : 30 > 2 thereby ft_putnbr(30 / 2, base)
+
+Step 4 : 15 > 2 thereby ft_putnbr(15 / 2, base)
+
+Step 5 : 7 > 2 thereby ft_putnbr(7 / 2, base)
+
+Step 6 : 3 > 2 thereby ft_putnbr(3 / 2, base)
+
+Step 7 : 1 < 2
+
+-----------------ft_putchar--------------------
+
+- So now we ft_putchar(*(base + (nbr % BaseLen))). 
+- It mean that we ft_putchar the value of my array at index = (nbr % Baselen);
+- In this case I will ft_putchar the value at index (nbr % 2). If nbr > 2, nbr % 2 = the remainder of nbr / 2.
+- The ft_putchar order will be "step 7 -> step 6 -> step 5 -> step 4 -> step 3 -> step 2 -> step 1".
+
+ft_putchar(*(base + (1 % 2)))   = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (3 % 2)))   = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (7 % 2)))   = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (15 % 2)))  = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (30 % 2)))  = ft_putchar(*(base + 0)) = 0
+ft_putchar(*(base + (61 % 2)))  = ft_putchar(*(base + 1)) = 1
+ft_putchar(*(base + (123 % 2))) = ft_putchar(*(base + 1)) = 1
+
+----------------the final result----------------
+
+finally the result step by step will be :
+
+step 1 -> 1
+step 2 -> 11
+step 3 -> 111
+step 4 -> 1111
+step 5 -> 11110
+step 6 -> 111101
+step 7 -> 1111011(the result)
+__________________________________________________
+               
+               \ BASE 8 /
+                "poneyvif"
+               Baselen = 8
+-------how it work step by step---------------
+
+Step 1 : 123 > 8 thereby ft_putnbr(123 / 8, base)
+
+Step 2 : 15 > 8 thereby ft_putnbr(15 / 8, base)
+
+Step 3 : 1 < 8 
+
+-----------------ft_putchar--------------------
+
+- So now we ft_putchar(*(base + (nbr % BaseLen))). 
+- It mean that we ft_putchar the value of my array at index = (nbr % Baselen);
+- In this case I will ft_putchar the value at index (nbr % 8). If nbr > 8, nbr % 8 = the remainder of nbr / 8.
+- The ft_putchar order will be "step 7 -> step 3 -> step 2 -> step 1".
+
+ft_putchar(*(base + (1 % 8)))   = ft_putchar(*(base + 1)) = 0
+ft_putchar(*(base + (15 % 8)))  = ft_putchar(*(base + 7)) = f
+ft_putchar(*(base + (123 % 8))) = ft_putchar(*(base + 3)) = e
+
+----------------the final result----------------
+
+finally the result step by step will be :
+
+step 1 -> o
+step 2 -> of
+step 3 -> ofe(the result)
