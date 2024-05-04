@@ -131,7 +131,7 @@ Step 3 : 1 < 8
 - In this case I will ft_putchar the value at index (nbr % 8). If nbr > 8, nbr % 8 = the remainder of nbr / 8.
 - The ft_putchar order will be "step 7 -> step 3 -> step 2 -> step 1".
 
-ft_putchar(*(base + (1 % 8)))   = ft_putchar(*(base + 1)) = 0
+ft_putchar(*(base + (1 % 8)))   = ft_putchar(*(base + 1)) = o
 ft_putchar(*(base + (15 % 8)))  = ft_putchar(*(base + 7)) = f
 ft_putchar(*(base + (123 % 8))) = ft_putchar(*(base + 3)) = e
 
