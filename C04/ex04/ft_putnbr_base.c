@@ -41,9 +41,9 @@ int     check_base(char *str)
 
 void    ft_putnbr_base(int nbr, char *base)
 {
-    int     l;
+    int     BaseLen;
 
-    l = ft_strlen(base);
+    BaseLen = ft_strlen(base);
     if(!check_base(base))
         return;
     if (nbr < 0)
@@ -51,16 +51,14 @@ void    ft_putnbr_base(int nbr, char *base)
         nbr *= -1;
         ft_putchar('-');
     }
-    if (nbr >= l)
-    {
-        ft_putnbr_base((nbr / l), base);
-    }
-    ft_putchar(*(base + (nbr % l)));
+    if (nbr >= BaseLen)
+        ft_putnbr_base((nbr / BaseLen), base);
+    ft_putchar(*(base + (nbr % BaseLen)));
 }
 
 int main(void)
 {
-    char    *test = "bar";
-    ft_putnbr_base(125, test);
+    char    *test = "0123456789";
+    ft_putnbr_base(10, test);
     return (0);
 }
