@@ -42,7 +42,9 @@ int     check_base(char *str)
 void    ft_putnbr_base(int nbr, char *base)
 {
     int     BaseLen;
+    long    l;
 
+    l = nbr;
     BaseLen = ft_strlen(base);
     if(!check_base(base))
         return;
@@ -58,7 +60,7 @@ void    ft_putnbr_base(int nbr, char *base)
 
 int main(void)
 {
-    char    *test = "0123456789";
-    ft_putnbr_base(10, test);
+    char    *test = "01";
+    ft_putnbr_base(-123, test);
     return (0);
 }
