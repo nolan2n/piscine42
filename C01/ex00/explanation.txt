@@ -26,7 +26,7 @@ int a  |  0x48  | 28
 int *p |  0x78  | 0x48
 -----------------------
 
-_______________Step 2 (dereferencing my pointer and assigning the value 42 to int a)_______________________
+_______________Step 3 (dereferencing my pointer and assigning the value 42 to int a)_______________________
 *p = 42;
 
        |address | Value
