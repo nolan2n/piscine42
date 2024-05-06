@@ -32,7 +32,7 @@ step 2(the loop) :
 c++ explanation :
                    - the c++ will wil do c + 1 after writing the char
                    - for example : 
-                                  .after we ft_putchar the first ft_putchar -> c = 'a' + 1 wich mean that c = 97 + 1 = 98 = 'b'   
+                                  .after the first ft_putchar -> c = 'a' + 1 wich mean that c = 97 + 1 = 98 = 'b'   
  
-!- if you want to write a char without his Decimal value you have to put in beetwen ''. 
+!- if you want to write a char without his Decimal value you have to put it beetwen ''. 
 !- You can use the same logic for ex02 and ex03.
