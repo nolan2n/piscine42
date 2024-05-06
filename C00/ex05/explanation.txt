@@ -53,8 +53,8 @@
 now that c > '9' :
                     1- We exit the loop (while(c <= '9'))
                     
-                    2- We do b++ so b =  b + 1  
-                                      = '1'+ 1 = '2'
+                    2- We do b++ so b = (a + 1) + 1 
+                                      = '0'+ 2 = '2'
                     
                     3- We Check if the condition to stay in loop "while (b <= '8')" is still valid
                     
