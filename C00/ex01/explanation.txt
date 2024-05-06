@@ -1,0 +1,38 @@
+          \ ft_print_alphabet /
+
+------------ascii table-------------
+
+- the Ascii table is an indexed list of char with an assigned numerical value for each of them
+
+- To display the alphabet we need to use the ascii table (check the man ascii)
+
+- In the ascii  table all alphabet's letters in lowercase follow each other 
+
+exemple :
+           Dec | Char
+           ---------
+           97  | a
+           98  | b
+           99  | c
+           ..  | ..
+           122 | z
+
+- So in a function you can write either one or the other, it's the same :
+                                                                            .char c = 'a'
+                                                                            .char c = 97
+
+------------How it work, step by step------------------
+
+step 1 : we create a char and then assigne him the char 'a' 
+
+step 2(the loop) : 
+                    - the 'while loop' will continue while the char c (that's equal to 'a') is inferior or equal to the char 'z'
+                    - in the loop we're calling the function ft_putchar that will write my char 
+
+c++ explanation :
+                   - the c++ will wil do c + 1 after writing the char
+                   - for example : 
+                                  .after we ft_putchar the first ft_putchar -> c = 'a' + 1 wich mean that c = 97 + 1 = 98 = 'b'   
+ 
+!- if you want to write a char without his Decimal value you have to put in beetwen ''. 
+!- You can use the same logic for ex02 and ex03.
