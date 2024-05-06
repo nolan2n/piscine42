@@ -24,7 +24,7 @@
 
 8- The condition is valid ('2' < '9') so we go in the loop with a = '0' ; b = '1' and c = '2'
 
-----------How the loop "while (c <= '9') work--------------------------------
+----------How the loop "while (c <= '9')" work--------------------------------
 
   a  |    b    |    c    |
      | (a + 1) | (b + 1) |
