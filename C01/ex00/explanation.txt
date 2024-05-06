@@ -1,0 +1,45 @@
+        \ ft_ft /
+
+- the purpose of the function is to dereference my pointer and assigne the value 42 to the variable pointed.
+
+-----------------How it work-----------------------
+
+
+_______________Step 1_______________________
+int a = 28;
+int *p;
+
+       |address | Value
+-----------------------
+int a  |  0x48  | 28
+-----------------------
+int *p |  0x78  | ?????
+-----------------------
+
+_______________Step 2 (initialise my pointer)_______________________
+p = &a;
+
+       |address | Value
+-----------------------
+int a  |  0x48  | 28
+-----------------------
+int *p |  0x78  | 0x48
+-----------------------
+
+_______________Step 2 (dereferencing my pointer and assigning the value 42 to int a)_______________________
+*p = 42;
+
+       |address | Value
+-----------------------
+int a  |  0x48  | 42
+-----------------------
+int *p |  0x78  | 0x48
+-----------------------
+
+!- tips :
+           - MyVariable : the value of the variable
+           - &MyVariable : the address of the variable
+
+           - MyPointer : the adress of the variable pointed
+           - *MyPointer : the value of the variable pointed
+           - &MyPointer : the adress of my pointer
