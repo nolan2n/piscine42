@@ -39,7 +39,7 @@ int        **nbr2 |  0x57  | ?????
 int         *nbr1 |  0x58  | ?????
 -----------------------------------
 
-_______________Step 3 initialise my pointers_______________________
+_______________Step 2 initialise my pointers_______________________
 nbr1 = &nbr
 nbr2 = &nb1
 nbr3 = &nbr2
@@ -73,7 +73,7 @@ int        **nbr2 |  0x57  | 0x48
 int         *nbr1 |  0x58  | 0x48
 ---------------------------------
 
-_______________Step 2 dereferencing my pointer and assigning the value 42 to the variable pointed_______________________
+_______________Step 3 dereferencing my pointer and assigning the value 42 to the variable pointed_______________________
 *********nbr9 = 42
 
                   |address | Value
