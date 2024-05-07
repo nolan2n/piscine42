@@ -13,12 +13,12 @@ void    ft_ultimate_div_mod(int *a, int *b)
 
 int     main(void)
 {
-    int     a;
-    int     b;
+    int     c;
+    int     d;
 
-    a = 12;
-    b = 4;
-    ft_ultimate_div_mod(&a, &b);
-    printf ("div = %d\nmod = %d\n", a, b);
+    c = 12;
+    d = 4;
+    ft_ultimate_div_mod(&c, &d);
+    printf ("div = %d\nmod = %d\n", c, d);
     return(0);
 }

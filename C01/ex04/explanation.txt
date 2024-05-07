@@ -1,0 +1,79 @@
+----------------How it work-----------------------
+
+_______________Step 1_______________________
+int     c = 12
+int     d = 4
+
+          |address | Value
+--------------------------
+int c     |  0x48  |  12
+--------------------------
+int d     |  0x78  |  4
+--------------------------
+
+_______________Step 2_______________________
+
+interaction beetween my main and my function (ft_ultimate_div_mod) :
+ 
+                                                          - In my main I created 2 int 
+
+                                                          - if I want them to interact with the pointer set as a parameter I have to put the address of my int.
+
+                                                          - ft_ultimate_div_mod(int *a, int *b) will do this when interacting with the pointer set as parameter : 
+                                                                                                                                                                                         .a = &c
+                                                                                                                                                                                         .b = &d
+1)
+ft_div_mod(c, d, &div, &mod);
+
+          |address | Value
+--------------------------
+int c     |  0x48  |  12
+--------------------------
+int d     |  0x78  |  4
+--------------------------
+int a     |  0x88  | 0x48
+--------------------------
+int b     |  0x55  | 0x78
+--------------------------
+
+
+2)
+int     div;
+int     mod;
+div = *a / *b;
+mod = *a % *b;
+ 
+          |address | Value
+----------------------------
+int c    |  0x48  |  12
+----------------------------
+int d    |  0x78  |  4
+----------------------------
+int *a   |  0x88  |  0x48
+----------------------------
+int *b   |  0x55  |  0x78
+----------------------------
+int div  |  0x44  |  12 / 4
+----------------------------
+int mod  |  0x77  |  12 % 4
+-----------------------------
+
+
+2)
+*a = div
+*b = mod
+ 
+          |address | Value
+----------------------------
+int c    |  0x48  |  12 / 4
+----------------------------
+int d    |  0x78  |  12 % 4
+----------------------------
+int *a   |  0x88  |  0x48
+----------------------------
+int *b   |  0x55  |  0x78
+----------------------------
+int div  |  0x44  |  12 / 4
+----------------------------
+int mod  |  0x77  |  12 % 4
+-----------------------------
