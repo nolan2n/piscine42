@@ -1,0 +1,75 @@
+                   \ ft_putstr /
+
+--------------how it work-----------------------
+
+__________________step 1________________________
+
+char *test = "hello";
+
+            |address | Value
+----------------------------
+char        |  0x40  |  'h'
+----------------------------
+char        |  0x41  |  'e'
+----------------------------
+char        |  0x42  |  'l'
+----------------------------
+char        |  0x43  |  'l'
+----------------------------
+char        |  0x44  |  'o'
+----------------------------
+char        |  0x45  |  '\0'
+----------------------------
+char *test  |  0x03  | 0x40
+-----------------------------
+
+!- my Pointer wil always have the address of the first char in the string
+
+!- All the address in a string follow each other 
+
+_______________Step 2(the ft_putstr)_______________________
+
+interaction beetween my main and my function (ft_putstr) :
+ 
+                                                          - In my main I created a string
+
+                                                          - So if I want my string to interact with my pointer set as a parameter I have to just put the name of my string.
+
+                                                          - ft_putstr(test) will do this when interacting with the pointer set as parameter : 
+                                                                                                                                                     .str = test (=the address of the variable pointed)
+                                                                                                                                                          = 0x48
+
+1)
+while (*str)
+        write (1, &*str++, 1);
+
+            |address | Value
+----------------------------
+char        |  0x40  |  'h'
+----------------------------
+char        |  0x41  |  'e'
+----------------------------
+char        |  0x42  |  'l'
+----------------------------
+char        |  0x43  |  'l'
+----------------------------
+char        |  0x44  |  'o'
+----------------------------
+char        |  0x45  |  '\0'
+----------------------------
+char *test  |  0x03  | 0x40
+-----------------------------
+char *str   |  0x01  | 0x40
+-----------------------------
+
+-the programme will continue until the value the variable pointed is equal to '\0'
+
+the loop explanation :
+                         - the first 1 in write is to write in the console (the standard output)
+                         
+                         - &*str++ meaning :
+                                             .&*str = write what's in the adress of the variable pointed by str
+                                             .++ = it will point to the adress + 1 so the next char in the string, because in a string all address's char follow each other
+                        
+                         - the last 1 mean that it will write 1 char.
+
