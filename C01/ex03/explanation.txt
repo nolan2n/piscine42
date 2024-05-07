@@ -1,0 +1,77 @@
+----------------How it work-----------------------
+
+_______________Step 1_______________________
+int     c = 12
+int     d = 3
+int     div2 = 4
+int     mod2 = 4
+
+          |address | Value
+--------------------------
+int c     |  0x48  |  12
+--------------------------
+int d     |  0x78  |  3
+--------------------------
+int div2  |  0x14  |  4
+--------------------------
+int mod2  |  0x34  |  4
+--------------------------
+
+_______________Step 2_______________________
+
+interaction beetween my main and my function (ft_div_mod) :
+ 
+                                                          - In my main I created 4 int (two for the division and modulo and an another two to store the the result of the division and modulo)
+
+                                                          - if I want div and mod to interact with the pointer set as a parameter I have to put the address of my int.
+
+                                                          - ft_div_mod(int a, int b, int *div, int *mod) will do this when interacting with the pointer and the int set as parameter : 
+                                                                                                                                                                                         .a = c
+                                                                                                                                                                                         .b = d
+                                                                                                                                                                                         .div = &div2
+                                                                                                                                                                                         .mod = &mod2
+1)
+ft_div_mod(c, d, &div, &mod);
+
+          |address | Value
+--------------------------
+int c     |  0x48  |  12
+--------------------------
+int d     |  0x78  |  3
+--------------------------
+int div2  |  0x14  |  4
+--------------------------
+int mod2  |  0x34  |  4
+--------------------------
+int a     |  0x88  |  12
+--------------------------
+int b     |  0x55  |  3
+--------------------------
+int *div  |  0x44  |  0x14
+--------------------------
+int *mod  |  0x77  |  0x34
+--------------------------
+
+
+2)
+*div = a / b;
+*mod = a % b;
+ 
+          |address | Value
+--------------------------
+int c     |  0x48  |  12
+--------------------------
+int d     |  0x78  |  3
+--------------------------
+int div2  |  0x14  | a / b
+--------------------------
+int mod2  |  0x34  | a % b
+--------------------------
+int a     |  0x88  |  12
+--------------------------
+int b     |  0x55  |  3
+--------------------------
+int *div  |  0x44  |  0x14
+--------------------------
+int *mod  |  0x77  |  0x34
+--------------------------

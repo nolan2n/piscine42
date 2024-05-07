@@ -8,16 +8,16 @@ void    ft_div_mod(int a, int b, int *div, int *mod)
 
 int     main(void)
 {
-    int     a;
-    int     b;
-    int     div;
-    int     mod;
+    int     c;
+    int     d;
+    int     div2;
+    int     mod2;
 
-    a = 12;
-    b = 3;
-    div = 4;
-    mod = 4;
-    ft_div_mod(a, b, &div, &mod);
-    printf("div = %d\nmod = %d\n", div, mod);
+    c = 12;
+    d = 3;
+    div2 = 4;
+    mod2 = 4;
+    ft_div_mod(c, d, &div2, &mod2);
+    printf("div = %d\nmod = %d\n", div2, mod2);
     return(0);
 }
