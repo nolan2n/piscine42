@@ -1,0 +1,96 @@
+            \ ft_swap /
+
+example :
+            before swap : c = 4 ; d = 5
+            after swap : c = 5 ; d = 4
+
+
+-----------------How it work-----------------------
+
+_______________Step 1_______________________
+int c = 4;
+int d = 5;
+
+       |address | Value
+-----------------------
+int c  |  0x48  |  4
+-----------------------
+int d  |  0x78  |  5
+-----------------------
+
+_______________Step 2(the swap)_______________________
+
+interaction beetween my main and my function (ft_swap) :
+ 
+                                                          - In my main I created two interger 
+
+                                                          -so if I want them to interact with the two pointer set as a parameter I have to put the address of my int.
+
+                                                          - ft_swap(&c, &d) will do this when interacting with the pointer set as parameter : 
+                                                                                                                                               .a = &c
+                                                                                                                                               .b = &d
+1)
+ft_swap(&c, &d)
+
+       |address | Value|
+-----------------------|
+int c  |  0x48  |  4   |
+-----------------------|
+int d  |  0x78  |  5   |
+-----------------------|
+int *a |  0x30  | 0x48 |
+-----------------------|
+int *b |  0x17  | 0x78 |
+-----------------------|
+
+
+2)
+int     swap;
+swap = *b;
+ 
+        |address | Value|
+------------------------|
+int c   |  0x48  |  4   |
+------------------------|
+int d   |  0x78  |  5   |
+------------------------|
+int *a  |  0x30  | 0x48 |
+------------------------|
+int *b  |  0x17  | 0x78 |
+------------------------|
+int swap|  0x89  |  5   |
+------------------------|
+
+
+3)
+*b = *a;
+
+        |address | Value|
+------------------------|
+int c   |  0x48  |  5   |
+------------------------|
+int d   |  0x78  |  5   |
+------------------------|
+int *a  |  0x30  | 0x48 |
+------------------------|
+int *b  |  0x17  | 0x78 |
+------------------------|
+int swap|  0x89  | 5    |
+------------------------|
+
+
+4)
+*a = swap;
+
+        |address | Value|
+------------------------|
+int c   |  0x48  |  5   |
+------------------------|
+int d   |  0x78  |  4   |
+------------------------|
+int *a  |  0x30  | 0x78 |
+------------------------|
+int *b  |  0x17  | 0x48 |
+------------------------|
+int swap|  0x89  | 5    |
+------------------------|

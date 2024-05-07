@@ -11,13 +11,13 @@ void    ft_swap(int *a, int *b)
 
 int     main(void)
 {
-    int     a;
-    int     b;
+    int     c;
+    int     d;
 
-    a = 4;
-    b = 5;
-    printf ("before :\n a = %d\n b = %d\n", a, b);
-    ft_swap(&a, &b);
-    printf ("after :\n a = %d\n b = %d\n", a, b);
+    c = 4;
+    d = 5;
+    printf ("before :\n a = %d\n b = %d\n", c, d);
+    ft_swap(&c, &d);
+    printf ("after :\n a = %d\n b = %d\n", c, d);
     return(0);
 }
