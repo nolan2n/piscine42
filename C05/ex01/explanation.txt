@@ -1,0 +1,76 @@
+
+_________________ft_recusvive_factorial(4)____________________
+
+
+if(4 < 0)
+        return(0);
+    if(4 == 0 || 4 == 1)
+        return(1);
+    else
+        return(4 * ft_recusvive_factorial(4 - 1)); ---> we do this and to be able able of doing this multiplication we need the return value of ft_recusvive_factorial(4 - 1) 
+
+------------------------------------------------------------------------
+_________________ft_recusvive_factorial(3)____________________
+
+
+if(3 < 0)
+        return(0);
+    if(3 == 0 || 3 == 1)
+        return(1);
+    else
+        return(3 * ft_recusvive_factorial(3 - 1)); ---> we do this and to be able able of doing this multiplication we need the return value of ft_recusvive_factorial(3 - 1)
+
+----------------------------------------------------------------------
+_________________ft_recusvive_factorial(2)____________________
+
+
+if(2 < 0)
+        return(0);
+    if(2 == 0 || 2 == 1)
+        return(1);
+    else
+        return(2 * ft_recusvive_factorial(2 - 1)); ---> we do this and to be able able of doing this multiplication we need the return value of ft_recusvive_factorial(2 - 1)
+
+----------------------------------------------------------------------
+_________________ft_recusvive_factorial(1)____________________
+
+
+if(1 < 0)
+        return(0);
+    if(1 == 0 || 1 == 1)
+        return(1); -------> we do this
+    else
+        return(1 * ft_recusvive_factorial(1 - 1));
+
+
+--------------------------------------------------------------------------
+
+Now we can calculate step by step the return value of ft_recusvive_factorial(2) then ft_recusvive_factorial(3) and then ft_recusvive_factorial(4) wich will be our final result
+
+__________________________________________________________________________
+-----------------------------------------------------------------------------------
+_________________step 1- the return value of ft_recusvive_factorial(2)____________________
+
+    return = (2 * ft_recusvive_factorial(2 - 1))
+           = (2 * ft_recusvive_factorial(1)) !- we multiple 2 by the return value of ft_recusvive_factorial(1)
+           = (2 * 1) 
+           = (2)
+
+-----------------------------------------------------------------------------------
+_________________step 2- the return value of ft_recusvive_factorial(3)____________________
+
+    return = (3 * ft_recusvive_factorial(3 - 1))
+           = (3 * ft_recusvive_factorial(2)) !- we multiple 3 by the return value of ft_recusvive_factorial(2)
+           = (3 * 2) 
+           = (6)
+
+-----------------------------------------------------------------------------------
+_________________step 3- the return value of ft_recusvive_factorial(4)____________________
+
+    return = (4 * ft_recusvive_factorial(4 - 1))
+           = (4 * ft_recusvive_factorial(3)) !- we multiple 4 by the return value of ft_recusvive_factorial(3)
+           = (4 * 6) 
+           = (24) -------> The final result
+
+-----------------------------------------------------------------------------------------------
+_______________________________________________________________________________________________
