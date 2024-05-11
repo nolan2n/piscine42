@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 int     ft_strlen(char *str)
 {
@@ -11,7 +10,7 @@ int     ft_strlen(char *str)
     return (i);
 }
 
-char    *ft_putstr_recursive(char *str, int Strlen)
+void    ft_putstr_recursive(char *str, int Strlen)
 {
     if (Strlen > 0)
         ft_putstr_recursive(str, Strlen - 1); 
