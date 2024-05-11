@@ -1,0 +1,72 @@
+!- In my main I created an int Strlen that has the lenght - 1 of my string
+!- the minus 1 is to not write the '\0' 
+!- In this case Strlen = 4
+___________________________________________________________________
+---------------step 1- ft_putstr_recursive(char *str, 4)------------------------
+
+if (4 > 0)
+        ft_putstr_recursive(str, 4 - 1); ------> we do this 
+write(1, &*(str + 4), 1);
+
+___________________________________________________________________
+---------------step 2- ft_putstr_recursive(char *str, 3)------------------------
+
+if (3 > 0)
+        ft_putstr_recursive(str, 3 - 1); ------> we do this 
+write(1, &*(str + 3), 1);
+
+___________________________________________________________________
+---------------step 3- ft_putstr_recursive(char *str, 2)------------------------
+
+if (2 > 0)
+        ft_putstr_recursive(str, 2 - 1); ------> we do this 
+write(1, &*(str + 2), 1);
+
+___________________________________________________________________
+---------------step 4- ft_putstr_recursive(char *str, 1)------------------------
+
+if (1 > 0)
+        ft_putstr_recursive(str, 1 - 1); ------> we do this 
+write(1, &*(str + 1), 1);
+
+___________________________________________________________________
+---------------step 5- ft_putstr_recursive(char *str, 0)------------------------
+
+if (0 > 0)
+        ft_putstr_recursive(str, 0 - 1);
+write(1, &*(str + 0), 1); ------> we do this
+
+___________________________________________________________________
+
+!- Now we write each char in accordance with an index 
+!- The index will be the value that had Strlen in the step 
+!- the order of the writting is "step 5 --> step 4 --> step 3 --> step 2 --> step 1" 
+___________________________________________________________________
+---------------------The write Part--------------------------------
+
+            |address | Value| index (= the Strlen value)
+----------------------------|---------------------------
+char        |  0x40  |  'h' |        0 at step 5
+----------------------------|---------------------------
+char        |  0x41  |  'e' |        1 at step 4
+----------------------------|---------------------------
+char        |  0x42  |  'l' |        2 at step 3
+----------------------------|---------------------------
+char        |  0x43  |  'l' |        3 at step 2
+----------------------------|---------------------------
+char        |  0x44  |  'o' |        4 at step 1
+----------------------------|----------------------------
+char        |  0x45  |  '\0'|        
+----------------------------|
+char *test  |  0x03  | 0x40 |
+----------------------------|
+char *str   |  0x01  | 0x40 |
+----------------------------|
+
+1) write(1, &*(str + 0), 1) ---> 'h'
+2) write(1, &*(str + 1), 1) ---> 'e'
+3) write(1, &*(str + 2), 1) ---> 'l'
+4) write(1, &*(str + 3), 1) ---> 'l'
+5) write(1, &*(str + 4), 1) ---> 'o'
+
+- The final result will be "hello"
