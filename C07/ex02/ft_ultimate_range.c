@@ -24,5 +24,6 @@ int	main(void)
 {
 	int		*test;
 	printf(":%d:\n", ft_ultimate_range(&test, 5, 10));
+	free (test);
 	return (0);
 }
