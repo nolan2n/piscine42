@@ -34,5 +34,6 @@ int main(int argc, char **argv)
         test = ft_strdup(*(argv + 1));
         printf(":%s:\n", test);
     }
+    free(test);
     return(0);
 }
