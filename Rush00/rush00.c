@@ -1,5 +1,14 @@
 #include <unistd.h>
 
+int     ft_mini_atoi(char *str)
+{
+    int     convert;
+    convert = 0;
+    while(*str >= '0' && *str <= '9')
+        convert = convert * 10 + (*str++ - '0');
+    return (convert);
+}
+
 void    ft_putchar(char c)
 {
     write(1, &c, 1);
@@ -51,8 +60,9 @@ void    rush00(int x, int y)
     }
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
-    rush00(5, 3);
+    if (argc == 3)
+        rush00(ft_mini_atoi(argv[1]), ft_mini_atoi(argv[2]));
     return(0);
 }
